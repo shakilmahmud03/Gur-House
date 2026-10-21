@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>গুড় হাউস | ১০০% খাঁটি খেজুরের গুড়</title>
+<meta name="description" content="গুড় হাউস — ১০০% খাঁটি ও ভেজালমুক্ত ঐতিহ্যবাহী খেজুরের গুড়। সারা বাংলাদেশে ক্যাশ অন ডেলিভারি।">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  /* ===== ফন্ট বদলাতে শুধু এই দুই লাইন পরিবর্তন করুন (সাথে উপরের Google Fonts লিংক) ===== */
+  :root {
+    --font-body: 'Noto Sans Bengali', 'Hind Siliguri', sans-serif;   /* সাধারণ লেখা */
+    --font-head: 'Baloo Da 2', 'Noto Sans Bengali', sans-serif;      /* শিরোনাম */
+  }
+  body { font-family: var(--font-body); background:#FDFBF7; color:#4A2511; line-height:1.65; }
+  h1, h2, h3, h4 { font-family: var(--font-head); line-height:1.3; }
+  .reveal { opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.show { opacity:1; transform:none; }
+  .faq-body { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+  .faq-item.open .faq-body { max-height:240px; }
+  .faq-item.open .faq-icon { transform:rotate(45deg); }
+  .faq-icon { transition:transform .3s ease; }
+  .pot-bg { background:radial-gradient(circle at 30% 20%, #F6D9A8 0%, #E7B36A 45%, #C05621 100%); }
+  input:focus, select:focus, textarea:focus { outline:2px solid #D97706; outline-offset:1px; }
+  @keyframes floaty { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  .floaty { animation:floaty 4s ease-in-out infinite; }
+</style>
+<script>
+  tailwind.config = { theme: { extend: { fontFamily: { sans: ['Noto Sans Bengali','sans-serif'] } } } };
+</script>
+</head>
+<body class="antialiased">
+
+<!-- 1. Top Notification Bar -->
+<div class="bg-[#1E4620] text-white text-center text-sm md:text-base py-2 px-4 font-medium">
+  🚚 সারা বাংলাদেশে ক্যাশ অন ডেলিভারি সুবিধা! শীতের সেরা খাঁটি খেজুরের গুড়।
+</div>
+
+<!-- Header -->
+<header class="sticky top-0 z-40 bg-[#FDFBF7]/95 backdrop-blur border-b border-[#4A2511]/10">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-2">
+    <a href="#top" class="flex items-center gap-2">
+      <img src="logoo.png" alt="গুড় হাউস লোগো" class="w-12 h-12 rounded-full object-cover" onerror="this.style.display='none'; document.getElementById('logoFallback').classList.remove('hidden')">
+      <span id="logoFallback" class="hidden w-12 h-12 rounded-full pot-bg items-center justify-center text-2xl flex">🍯</span>
+      <span class="leading-tight">
+        <span class="block text-xl font-bold">গুড় হাউস</span>
+        <span class="block text-xs opacity-70">Gur House</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+      <a href="#products" class="hover:text-[#C05621]">আমাদের গুড়</a>
+      <a href="#why" class="hover:text-[#C05621]">কেন সেরা</a>
+      <a href="#identify" class="hover:text-[#C05621]">খাঁটি চেনার উপায়</a>
+      <a href="#faq" class="hover:text-[#C05621]">জিজ্ঞাসা</a>
+    </nav>
+    <a href="#order" class="bg-[#D97706] hover:bg-[#C05621] text-white text-sm font-semibold px-4 py-2 rounded-full transition">অর্ডার করুন</a>
+  </div>
+</header>
+
+<!-- 2. Hero -->
+<section id="top" class="relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
+    <div class="reveal">
+      <div class="flex items-center gap-3 mb-5">
+        <img src="logoo.png" alt="" class="w-16 h-16 rounded-full object-cover" onerror="this.style.display='none'">
+        <div>
+          <div class="text-2xl font-bold">গুড় হাউস</div>
+          <div class="text-sm opacity-70">Gur House</div>
+        </div>
+      </div>
+      <h1 class="text-3xl md:text-5xl font-bold leading-snug">
+        <span class="text-[#C05621]">১০০% খাঁটি</span> ও ভেজালমুক্ত ঐতিহ্যবাহী খেজুরের গুড়
+      </h1>
+      <p class="mt-4 text-base md:text-lg opacity-90 leading-relaxed">
+        কোনো চিনি, কেমিক্যাল বা কৃত্রিম রং নেই — গাছিদের হাতে তৈরি আসল স্বাদ ও মনমাতানো সুবাস।
+      </p>
+      <a href="#order" id="heroCta" class="inline-block mt-7 bg-[#D97706] hover:bg-[#C05621] hover:scale-105 text-white text-lg font-semibold px-8 py-3.5 rounded-full shadow-lg shadow-amber-700/30 transition transform">
+        পছন্দের গুড় অর্ডার করুন
+      </a>
+      <div class="mt-8 grid grid-cols-2 gap-3 max-w-md">
+        <div class="flex items-center gap-2 text-sm font-medium"><span class="text-[#1E4620]">✔</span> ১০০% প্রাকৃতিক</div>
+        <div class="flex items-center gap-2 text-sm font-medium"><span class="text-[#1E4620]">✔</span> কোনো চিনি নেই</div>
+        <div class="flex items-center gap-2 text-sm font-medium"><span class="text-[#1E4620]">✔</span> ক্যাশ অন ডেলিভারি</div>
+        <div class="flex items-center gap-2 text-sm font-medium"><span class="text-[#1E4620]">✔</span> সারা দেশে দ্রুত ডেলিভারি</div>
+      </div>
+    </div>
+    <div class="reveal flex justify-center">
+      <div class="relative">
+        <div class="absolute -inset-4 rounded-full bg-[#D97706]/10 blur-2xl"></div>
+        <img src="logoo.png" alt="গুড় হাউস — মাটির হাঁড়িতে খেজুরের গুড়" class="relative floaty w-72 h-72 md:w-96 md:h-96 rounded-full object-cover shadow-2xl border-4 border-white" onerror="this.outerHTML='<div class=\'relative floaty w-72 h-72 md:w-96 md:h-96 rounded-full pot-bg flex items-center justify-center text-9xl shadow-2xl border-4 border-white\'>🍯</div>'">
+        <span class="absolute top-2 right-0 bg-[#1E4620] text-white text-xs md:text-sm font-semibold px-3 py-1.5 rounded-full shadow">১০০% প্রাকৃতিক</span>
+        <span class="absolute bottom-6 left-0 bg-[#D97706] text-white text-xs md:text-sm font-semibold px-3 py-1.5 rounded-full shadow">ক্যাশ অন ডেলিভারি</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Products -->
+<section id="products" class="py-14 bg-white/60">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-10 reveal">
+      <h2 class="text-2xl md:text-4xl font-bold">সকল প্রকার গুড়</h2>
+      <p class="mt-2 opacity-80">আপনার পছন্দের খাঁটি গুড়টি বেছে নিন</p>
+    </div>
+    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- 4. Problem Awareness -->
+<section class="py-14">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="reveal bg-[#4A2511] text-[#FDFBF7] rounded-3xl p-6 md:p-10 shadow-xl">
+      <h2 class="text-2xl md:text-3xl font-bold text-center">বাজারের ভেজাল গুড় চেনার সতর্কতা</h2>
+      <p class="text-center mt-2 opacity-80">বাজারের বাণিজ্যিক গুড়ে যা মেশানো হতে পারে</p>
+      <ul class="mt-8 space-y-4">
+        <li class="flex gap-4 items-start bg-white/10 rounded-2xl p-4">
+          <span class="shrink-0 w-10 h-10 rounded-full bg-[#DC2626] flex items-center justify-center text-xl">⚠️</span>
+          <span><b>ক্ষতিকর হাইড্রোজ ও ফিটকিরি</b><br><span class="opacity-80 text-sm">গুড় কৃত্রিম ফর্সা ও হলুদ করার জন্য</span></span>
+        </li>
+        <li class="flex gap-4 items-start bg-white/10 rounded-2xl p-4">
+          <span class="shrink-0 w-10 h-10 rounded-full bg-[#DC2626] flex items-center justify-center text-xl">⚠️</span>
+          <span><b>অতিরিক্ত চিনি ও মিষ্টি শিরা মেশানো</b><br><span class="opacity-80 text-sm">ওজন ও মিষ্টতা বাড়ানোর জন্য</span></span>
+        </li>
+        <li class="flex gap-4 items-start bg-white/10 rounded-2xl p-4">
+          <span class="shrink-0 w-10 h-10 rounded-full bg-[#DC2626] flex items-center justify-center text-xl">⚠️</span>
+          <span><b>কৃত্রিম কেমিক্যাল ফ্লেভার ও ক্ষতিকর রং</b><br><span class="opacity-80 text-sm">আসল ঘ্রাণ ও রঙের নকল করতে</span></span>
+        </li>
+      </ul>
+      <p class="mt-6 text-center font-semibold text-amber-300">গুড় হাউসে — এসবের কিছুই নেই।</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Why Choose -->
+<section id="why" class="py-14 bg-white/60">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl md:text-4xl font-bold text-center mb-10 reveal">কেন আমাদের গুড় সেরা?</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="reveal bg-[#FDFBF7] border border-[#4A2511]/10 rounded-2xl p-6 text-center hover:shadow-lg transition">
+        <div class="mx-auto w-14 h-14 rounded-full bg-[#1E4620]/10 text-[#1E4620] flex items-center justify-center text-2xl mb-4">🌴</div>
+        <h3 class="font-bold text-lg">সরাসরি গাছিদের কাঁচা রস থেকে তৈরি</h3>
+        <p class="text-sm opacity-80 mt-2">অভিজ্ঞ গাছিদের সংগ্রহ করা তাজা খেজুরের রস থেকে ঐতিহ্যবাহী পদ্ধতিতে জ্বাল দেওয়া।</p>
+      </div>
+      <div class="reveal bg-[#FDFBF7] border border-[#4A2511]/10 rounded-2xl p-6 text-center hover:shadow-lg transition">
+        <div class="mx-auto w-14 h-14 rounded-full bg-[#1E4620]/10 text-[#1E4620] flex items-center justify-center text-2xl mb-4">🚫</div>
+        <h3 class="font-bold text-lg">শতভাগ চিনি ও প্রিজারভেটিভ মুক্ত</h3>
+        <p class="text-sm opacity-80 mt-2">কোনো চিনি, কেমিক্যাল বা প্রিজারভেটিভ ছাড়াই সম্পূর্ণ প্রাকৃতিক।</p>
+      </div>
+      <div class="reveal bg-[#FDFBF7] border border-[#4A2511]/10 rounded-2xl p-6 text-center hover:shadow-lg transition">
+        <div class="mx-auto w-14 h-14 rounded-full bg-[#1E4620]/10 text-[#1E4620] flex items-center justify-center text-2xl mb-4">📦</div>
+        <h3 class="font-bold text-lg">প্রিমিয়াম ফুড-গ্রেড প্যাকেজিং</h3>
+        <p class="text-sm opacity-80 mt-2">স্বাস্থ্যসম্মত ও সুরক্ষিত প্যাকেজিংয়ে আপনার দরজায় পৌঁছে যায়।</p>
+      </div>
+      <div class="reveal bg-[#FDFBF7] border border-[#4A2511]/10 rounded-2xl p-6 text-center hover:shadow-lg transition">
+        <div class="mx-auto w-14 h-14 rounded-full bg-[#1E4620]/10 text-[#1E4620] flex items-center justify-center text-2xl mb-4">✅</div>
+        <h3 class="font-bold text-lg">আসল ঘ্রাণ ও স্বাদের নিশ্চয়তা</h3>
+        <p class="text-sm opacity-80 mt-2">খেজুরের সেই মন ভরানো সুবাস ও খাঁটি স্বাদ — নিশ্চিত।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Educational -->
+<section id="identify" class="py-14">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-10 reveal">
+      <h2 class="text-2xl md:text-4xl font-bold">খাঁটি গুড় চেনার সহজ উপায়</h2>
+      <p class="mt-2 opacity-80">রং, কঠিনতা ও স্বাদ দেখেই বুঝে নিন</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="reveal rounded-3xl border-2 border-[#1E4620] bg-white p-6 shadow-md">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-12 h-12 rounded-full bg-[#7A3E14] border-4 border-[#1E4620]/30"></span>
+          <h3 class="text-xl font-bold text-[#1E4620]">✔ খাঁটি গুড়</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex gap-2"><span class="text-[#1E4620] font-bold">✔</span> গাঢ় বাদামী/লালচে আভা</li>
+          <li class="flex gap-2"><span class="text-[#1E4620] font-bold">✔</span> নরম ও সহজে আঙুলে ভাঙে</li>
+          <li class="flex gap-2"><span class="text-[#1E4620] font-bold">✔</span> মুখে দিলে দ্রুত গলে যায়</li>
+        </ul>
+      </div>
+      <div class="reveal rounded-3xl border-2 border-[#DC2626] bg-white p-6 shadow-md">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-12 h-12 rounded-full bg-[#F5D020] border-4 border-[#DC2626]/30"></span>
+          <h3 class="text-xl font-bold text-[#DC2626]">✖ ভেজাল গুড়</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex gap-2"><span class="text-[#DC2626] font-bold">✖</span> অস্বাভাবিক চকচকে হলুদ</li>
+          <li class="flex gap-2"><span class="text-[#DC2626] font-bold">✖</span> অতিরিক্ত শক্ত</li>
+          <li class="flex gap-2"><span class="text-[#DC2626] font-bold">✖</span> মুখে দিলে চিনির কড়া স্বাদ</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. FAQ -->
+<section id="faq" class="py-14 bg-white/60">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-2xl md:text-4xl font-bold text-center mb-8 reveal">সাধারণ জিজ্ঞাসা</h2>
+    <div class="space-y-3" id="faqList">
+      <div class="faq-item reveal bg-[#FDFBF7] border border-[#4A2511]/15 rounded-2xl">
+        <button class="w-full flex justify-between items-center text-left px-5 py-4 font-semibold">
+          <span>গুড়ে কি কোনো চিনি মেশানো থাকে?</span><span class="faq-icon text-2xl text-[#D97706]">+</span>
+        </button>
+        <div class="faq-body"><p class="px-5 pb-4 opacity-90">না। আমাদের গুড় শতভাগ খেজুরের রস থেকে তৈরি। এতে কোনো চিনি, কেমিক্যাল, কৃত্রিম রং বা প্রিজারভেটিভ মেশানো হয় না।</p></div>
+      </div>
+      <div class="faq-item reveal bg-[#FDFBF7] border border-[#4A2511]/15 rounded-2xl">
+        <button class="w-full flex justify-between items-center text-left px-5 py-4 font-semibold">
+          <span>পার্সেল পাওয়ার পর খুলে দেখে টাকা দেওয়া যাবে?</span><span class="faq-icon text-2xl text-[#D97706]">+</span>
+        </button>
+        <div class="faq-body"><p class="px-5 pb-4 opacity-90">জি, ক্যাশ অন ডেলিভারি সুবিধায় পণ্য হাতে পেয়ে দেখে-শুনে তারপর মূল্য পরিশোধ করতে পারবেন।</p></div>
+      </div>
+      <div class="faq-item reveal bg-[#FDFBF7] border border-[#4A2511]/15 rounded-2xl">
+        <button class="w-full flex justify-between items-center text-left px-5 py-4 font-semibold">
+          <span>কাস্টমাইজড প্যাকেজিংয়ের অর্ডার কীভাবে নেব?</span><span class="faq-icon text-2xl text-[#D97706]">+</span>
+        </button>
+        <div class="faq-body"><p class="px-5 pb-4 opacity-90">অর্ডার ফর্মে "কাস্টমাইজড গুড় / গিফট বক্স" নির্বাচন করে নোট বক্সে আপনার চাহিদা লিখুন। আমরা ফোন বা হোয়াটসঅ্যাপে যোগাযোগ করে মূল্য ও প্যাকেজিং চূড়ান্ত করব।</p></div>
+      </div>
+      <div class="faq-item reveal bg-[#FDFBF7] border border-[#4A2511]/15 rounded-2xl">
+        <button class="w-full flex justify-between items-center text-left px-5 py-4 font-semibold">
+          <span>ডেলিভারি হতে কত দিন সময় লাগে?</span><span class="faq-icon text-2xl text-[#D97706]">+</span>
+        </button>
+        <div class="faq-body"><p class="px-5 pb-4 opacity-90">সাধারণত ঢাকার ভেতরে ১–২ দিন এবং ঢাকার বাইরে ২–৪ কর্মদিবসের মধ্যে পৌঁছে যায়।</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Checkout -->
+<section id="order" class="py-14">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-8 reveal">
+      <h2 class="text-2xl md:text-4xl font-bold">ক্যাশ অন ডেলিভারি অর্ডার ফর্ম</h2>
+      <p class="mt-2 opacity-80">ফর্মটি পূরণ করুন, পণ্য হাতে পেয়ে টাকা দিন</p>
+    </div>
+    <form id="orderForm" class="reveal grid md:grid-cols-5 gap-6 bg-white rounded-3xl shadow-xl border border-[#4A2511]/10 p-5 md:p-8" novalidate>
+      <div class="md:col-span-3 space-y-4">
+        <div>
+          <span class="block font-semibold mb-1">গুড় বাছাই করুন <span class="text-xs font-normal opacity-70">(একাধিক ধরন নেওয়া যাবে — প্রতিটির পাশে + চাপুন)</span></span>
+          <div id="productPicker" class="space-y-2"></div>
+          <p id="pickerErr" class="text-[#DC2626] text-xs mt-1 hidden">অনুগ্রহ করে অন্তত একটি গুড় বাছাই করুন।</p>
+        </div>
+        <div>
+          <span class="block font-semibold mb-1">ডেলিভারি এলাকা</span>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="cursor-pointer">
+              <input type="radio" name="zone" value="70" class="peer sr-only" checked>
+              <div class="peer-checked:border-[#D97706] peer-checked:bg-amber-50 border-2 border-[#4A2511]/15 rounded-xl p-3 text-center text-sm font-medium">ঢাকার ভেতরে<br><b>৳৭০</b></div>
+            </label>
+            <label class="cursor-pointer">
+              <input type="radio" name="zone" value="130" class="peer sr-only">
+              <div class="peer-checked:border-[#D97706] peer-checked:bg-amber-50 border-2 border-[#4A2511]/15 rounded-xl p-3 text-center text-sm font-medium">ঢাকার বাইরে<br><b>৳১৩০</b></div>
+            </label>
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1" for="name">আপনার নাম</label>
+          <input id="name" type="text" placeholder="যেমন: রহিম উদ্দিন" class="w-full border border-[#4A2511]/25 rounded-xl px-4 py-3 bg-[#FDFBF7]">
+          <p class="err text-[#DC2626] text-xs mt-1 hidden">অনুগ্রহ করে আপনার নাম লিখুন।</p>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1" for="phone">মোবাইল নম্বর</label>
+          <input id="phone" type="tel" inputmode="numeric" placeholder="01XXXXXXXXX" maxlength="14" class="w-full border border-[#4A2511]/25 rounded-xl px-4 py-3 bg-[#FDFBF7]">
+          <p class="err text-[#DC2626] text-xs mt-1 hidden">সঠিক ১১ সংখ্যার মোবাইল নম্বর দিন (যেমন: 017XXXXXXXX)।</p>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1" for="address">পূর্ণাঙ্গ ঠিকানা</label>
+          <textarea id="address" rows="3" placeholder="বাড়ি/রোড, থানা, জেলা" class="w-full border border-[#4A2511]/25 rounded-xl px-4 py-3 bg-[#FDFBF7]"></textarea>
+          <p class="err text-[#DC2626] text-xs mt-1 hidden">অনুগ্রহ করে পূর্ণাঙ্গ ঠিকানা লিখুন।</p>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1" for="district">জেলা</label>
+          <input id="district" type="text" placeholder="যেমন: রাজশাহী" class="w-full border border-[#4A2511]/25 rounded-xl px-4 py-3 bg-[#FDFBF7]">
+          <p class="err text-[#DC2626] text-xs mt-1 hidden">অনুগ্রহ করে আপনার জেলার নাম লিখুন।</p>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1" for="note">কাস্টমাইজড রিকোয়ারমেন্ট / নোট (ঐচ্ছিক)</label>
+          <textarea id="note" rows="2" placeholder="গিফট বক্স বা বিশেষ চাহিদার কথা লিখুন" class="w-full border border-[#4A2511]/25 rounded-xl px-4 py-3 bg-[#FDFBF7]"></textarea>
+        </div>
+      </div>
+
+      <aside class="md:col-span-2">
+        <div class="md:sticky md:top-24 bg-[#4A2511] text-[#FDFBF7] rounded-2xl p-5">
+          <h3 class="text-lg font-bold mb-4">অর্ডার সামারি</h3>
+          <div class="space-y-3 text-sm">
+            <div id="sumItems" class="space-y-2"></div>
+            <div class="flex justify-between border-t border-white/20 pt-3"><span class="opacity-90">পণ্যমূল্য</span><span id="sumSub" class="font-semibold"></span></div>
+            <div class="flex justify-between"><span class="opacity-90">ডেলিভারি চার্জ</span><span id="sumDel" class="font-semibold"></span></div>
+            <hr class="border-white/20">
+            <div class="flex justify-between text-lg font-bold text-amber-300"><span>সর্বমোট</span><span id="sumTotal"></span></div>
+          </div>
+          <p id="customNote" class="hidden mt-3 text-xs text-amber-200">* কাস্টমাইজড প্যাকের মূল্য আলোচনা সাপেক্ষে; আমরা যোগাযোগ করে চূড়ান্ত করব।</p>
+          <button type="submit" class="mt-5 w-full bg-[#D97706] hover:bg-[#C05621] text-white font-semibold py-3.5 rounded-xl transition shadow-lg">
+            ক্যাশ অন ডেলিভারিতে অর্ডার কনফার্ম করুন
+          </button>
+          <p id="formError" class="hidden mt-3 text-xs bg-[#DC2626] text-white rounded-lg px-3 py-2"></p>
+          <ul class="mt-4 text-xs space-y-1 opacity-90">
+            <li>✔ পণ্য হাতে পেয়ে টাকা দিন</li>
+            <li>✔ ১০০% খাঁটি, ভেজালমুক্ত</li>
+          </ul>
+        </div>
+      </aside>
+    </form>
+  </div>
+</section>
+
+<!-- 9. Footer -->
+<footer class="bg-[#4A2511] text-[#FDFBF7] pt-12 pb-6">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="logoo.png" alt="" class="w-14 h-14 rounded-full object-cover" onerror="this.style.display='none'">
+        <div><div class="text-xl font-bold">গুড় হাউস</div><div class="text-sm opacity-70">Gur House</div></div>
+      </div>
+      <p class="mt-3 text-sm opacity-80 leading-relaxed">গাছিদের হাতে তৈরি ১০০% খাঁটি খেজুরের গুড় — সরাসরি আপনার ঘরে।</p>
+    </div>
+    <div>
+      <h4 class="font-bold mb-3">যোগাযোগ</h4>
+      <p class="text-sm opacity-90">হেল্পলাইন: <a href="tel:+8801733734894" class="underline">০১৭৩৩৭৩৪৮৯৪</a></p>
+      <a href="https://wa.me/8801733734894" target="_blank" rel="noopener" class="inline-block mt-4 bg-[#1E4620] hover:bg-green-800 px-5 py-2.5 rounded-full text-sm font-semibold transition">💬 হোয়াটসঅ্যাপে মেসেজ করুন</a>
+    </div>
+    <div>
+      <h4 class="font-bold mb-3">সোশ্যাল মিডিয়া</h4>
+      <div class="flex gap-3 text-sm">
+        <a href="https://www.facebook.com/sakil.mahmud.031020" target="_blank" rel="noopener" class="bg-white/10 hover:bg-[#D97706] px-4 py-2 rounded-full transition">ফেসবুক</a>
+        <a href="#" class="bg-white/10 hover:bg-[#D97706] px-4 py-2 rounded-full transition">ইনস্টাগ্রাম</a>
+        <a href="#" class="bg-white/10 hover:bg-[#D97706] px-4 py-2 rounded-full transition">ইউটিউব</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-4 mt-8 pt-4 border-t border-white/15 text-center text-xs opacity-70">
+    © ২০২৬ গুড় হাউস। সর্বস্বত্ব সংরক্ষিত। — Shakil &amp; Mizan
+  </div>
+</footer>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4">
+  <div class="bg-[#FDFBF7] rounded-3xl max-w-md w-full p-7 text-center shadow-2xl">
+    <div class="mx-auto w-16 h-16 rounded-full bg-[#1E4620] text-white text-3xl flex items-center justify-center">✔</div>
+    <h3 class="text-2xl font-bold mt-4">অর্ডার সফল হয়েছে!</h3>
+    <p id="modalMsg" class="mt-3 opacity-90 leading-relaxed"></p>
+    <div id="modalSummary" class="mt-4 bg-white border border-[#4A2511]/10 rounded-xl p-4 text-sm text-left space-y-1"></div>
+    <a id="modalWa" href="#" target="_blank" rel="noopener" class="mt-5 inline-block bg-[#1E4620] hover:bg-green-800 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition">💬 WhatsApp-এও অর্ডার পাঠান (ঐচ্ছিক)</a>
+    <div><button id="modalClose" class="mt-4 bg-[#D97706] hover:bg-[#C05621] text-white font-semibold px-8 py-3 rounded-full transition">ঠিক আছে</button></div>
+  </div>
+</div>
+
+<script>
+  // ===== আপনার WhatsApp নম্বর এখানে বদলান (দেশ কোড 88 সহ, + বা স্পেস ছাড়া) =====
+  const WHATSAPP_NUMBER = '8801733734894';
+
+  // ===== Google Apps Script Web App URL এখানে বসান (Deploy করার পর পাবেন) =====
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycbw65XRcX2KjcsEmM3d56vsWskLnyggTaCXhPRq-yzvWywkHGR8cU2HMbObf9-y9m4E1/exec";
+
+  // ----- Data -----
+  const products = [
+    { id:'jhola', name:'খাঁটি ঝোলা গুড়', desc:'পিঠা-পায়েসের আসল অনুষঙ্গ', weight:'১ কেজি', price:650, badge:'জনপ্রিয়', image:'jhola' },
+    { id:'patali', name:'প্রিমিয়াম পাটালি গুড়', desc:'দানাদার ও খাঁটি স্বাদের পাটালি', weight:'১ কেজি', price:350, badge:'প্রিমিয়াম', image:'patali' },
+    { id:'lali', name:'খাঁটি লালি গুড়', desc:'মিষ্টি তরল লালি, চায়ের দারুণ বিকল্প', weight:'১ কেজি', price:300, badge:'১০০% প্রাকৃতিক', image:'lali' },
+    { id:'khuri', name:'ঐতিহ্যবাহী মাটির খুড়ি গুড়', desc:'খাঁটি মাটির পাত্রে জমানো', weight:'১ পিস / ৮০০ গ্রাম', price:350, badge:'ঐতিহ্যবাহী', image:'khuri' },
+    { id:'custom', name:'কাস্টমাইজড গুড় / গিফট বক্স', desc:'নিজের পছন্দমতো মিশ্রণ ও পারিবারিক উপহার', weight:'আপনার পছন্দমতো', price:0, badge:'গিফট', image:'custom' }
+  ];
+  const bn = n => String(n).replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
+  const taka = n => '৳' + bn(n.toLocaleString('en-US'));
+
+  // ===== প্রোডাক্টের ছবি =====
+  // ছবি বদলাতে: নিজের ছবিটি 'images' ফোল্ডারে রাখুন, নাম দিন প্রোডাক্টের আইডি অনুযায়ী:
+  //   jhola.jpg  patali.jpg  lali.jpg  khuri.jpg  custom.jpg   (png হলেও চলবে)
+  // আসল ছবি না থাকলে একই নামের .svg ডিফল্ট ছবি দেখাবে। কোড বদলাতে হবে না।
+  const IMG_EXT = ['jpg', 'png', 'svg'];
+  function imgFallback(el) {
+    const i = (+el.dataset.try || 0) + 1;
+    if (i < IMG_EXT.length) { el.dataset.try = i; el.src = el.dataset.base + '.' + IMG_EXT[i]; }
+    else { el.onerror = null; el.style.display = 'none'; }
+  }
+
+  // ----- Product cards -----
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = products.map(p => `
+    <div class="group reveal bg-[#FDFBF7] border border-[#4A2511]/10 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
+      <div class="relative pot-bg h-48 overflow-hidden">
+        <img src="images/${p.image}.jpg" data-base="images/${p.image}" data-try="0" alt="${p.name}" loading="lazy" onerror="imgFallback(this)"
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        <span class="absolute top-3 left-3 bg-[#1E4620] text-white text-xs font-semibold px-3 py-1 rounded-full">${p.badge}</span>
+      </div>
+      <div class="p-5">
+        <h3 class="text-lg font-bold">${p.name}</h3>
+        <p class="text-sm opacity-80 mt-1">${p.desc}</p>
+        <div class="flex items-end justify-between mt-4">
+          <div>
+            <div class="text-xs opacity-70">${p.weight}</div>
+            <div class="text-xl font-bold text-[#C05621]">${p.price ? taka(p.price) : 'মূল্য আলোচনা সাপেক্ষে'}</div>
+          </div>
+          <button data-pick="${p.id}" class="bg-[#D97706] hover:bg-[#C05621] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition">অর্ডার করুন</button>
+        </div>
+      </div>
+    </div>`).join('');
+
+  // ----- Multi-product picker + summary -----
+  const cart = {};                       // { productId: পরিমাণ }
+  const picker = document.getElementById('productPicker');
+  const pickerErr = document.getElementById('pickerErr');
+
+  function renderPicker() {
+    picker.innerHTML = products.map(p => {
+      const q = cart[p.id] || 0;
+      return `<div class="flex items-center justify-between gap-3 rounded-xl border-2 p-3 transition ${q ? 'border-[#D97706] bg-amber-50' : 'border-[#4A2511]/15 bg-[#FDFBF7]'}">
+        <div class="min-w-0">
+          <div class="font-semibold leading-snug">${p.name}</div>
+          <div class="text-xs opacity-70">${p.weight} · <span class="font-semibold text-[#C05621]">${p.price ? taka(p.price) : 'মূল্য আলোচনা সাপেক্ষে'}</span></div>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <button type="button" data-act="minus" data-id="${p.id}" aria-label="কমান" class="w-9 h-9 rounded-full bg-[#4A2511] text-white text-lg ${q ? '' : 'opacity-40'}">−</button>
+          <span class="w-6 text-center font-bold">${bn(q)}</span>
+          <button type="button" data-act="plus" data-id="${p.id}" aria-label="বাড়ান" class="w-9 h-9 rounded-full bg-[#D97706] text-white text-lg">+</button>
+        </div>
+      </div>`;
+    }).join('');
+  }
+  picker.addEventListener('click', e => {
+    const b = e.target.closest('button[data-act]');
+    if (!b) return;
+    const id = b.dataset.id, cur = cart[id] || 0;
+    cart[id] = b.dataset.act === 'plus' ? Math.min(20, cur + 1) : Math.max(0, cur - 1);
+    pickerErr.classList.add('hidden');
+    renderPicker(); update();
+  });
+
+  function update() {
+    const zone = parseInt(document.querySelector('input[name=zone]:checked').value);
+    const items = products.filter(p => cart[p.id] > 0).map(p => ({ p, q: cart[p.id] }));
+    const subtotal = items.reduce((t, i) => t + i.p.price * i.q, 0);
+    const hasCustom = items.some(i => !i.p.price);
+    const delivery = items.length ? zone : 0;
+    const total = subtotal + delivery;
+
+    document.getElementById('sumItems').innerHTML = items.length
+      ? items.map(i => `<div class="flex justify-between gap-3"><span class="opacity-90">${i.p.name} × ${bn(i.q)}</span><span class="font-semibold shrink-0">${i.p.price ? taka(i.p.price * i.q) : 'আলোচনা সাপেক্ষে'}</span></div>`).join('')
+      : '<div class="opacity-70 text-xs">এখনো কোনো গুড় বাছাই করা হয়নি</div>';
+    document.getElementById('sumSub').textContent = taka(subtotal);
+    document.getElementById('sumDel').textContent = taka(delivery);
+    document.getElementById('sumTotal').textContent = taka(total) + (hasCustom ? ' + কাস্টমাইজড' : '');
+    document.getElementById('customNote').classList.toggle('hidden', !hasCustom);
+    return { items, subtotal, hasCustom, zone, delivery, total };
+  }
+  function resetCart() { Object.keys(cart).forEach(k => delete cart[k]); renderPicker(); update(); }
+
+  document.querySelectorAll('input[name=zone]').forEach(r => r.addEventListener('change', update));
+  renderPicker(); update();
+
+  // প্রোডাক্ট কার্ডের "অর্ডার করুন" বাটন: ঐ গুড় অন্তত ১টি যোগ করে ফর্মে নিয়ে যায়
+  document.querySelectorAll('[data-pick]').forEach(b => b.addEventListener('click', () => {
+    const id = b.dataset.pick;
+    cart[id] = Math.max(1, cart[id] || 0);
+    pickerErr.classList.add('hidden');
+    renderPicker(); update();
+    document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+  }));
+
+  // ----- Validation + submit -----
+  const form = document.getElementById('orderForm');
+  const modal = document.getElementById('modal');
+  function toBnDigits(s){ return s.replace(/[০-৯]/g, d => '০১২৩৪৫৬৭৮৯'.indexOf(d)); }
+  const submitBtn = form.querySelector('button[type=submit]');
+  const submitLabel = submitBtn.textContent.trim();
+  const formError = document.getElementById('formError');
+  let sending = false;
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (sending) return; // একাধিকবার ক্লিক আটকাতে
+    formError.classList.add('hidden');
+
+    const pre = update();
+    if (!pre.items.length) {
+      pickerErr.classList.remove('hidden');
+      picker.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    pickerErr.classList.add('hidden');
+
+    const name = form.querySelector('#name'), phone = form.querySelector('#phone'),
+          addr = form.querySelector('#address'), district = form.querySelector('#district');
+    const phoneVal = toBnDigits(phone.value.trim()).replace(/[\s-]/g,'').replace(/^\+?88/,'');
+    const checks = [
+      [name, name.value.trim().length >= 2],
+      [phone, /^01[3-9]\d{8}$/.test(phoneVal)],
+      [addr, addr.value.trim().length >= 10],
+      [district, district.value.trim().length >= 2]
+    ];
+    let ok = true, first = null;
+    checks.forEach(([el, valid]) => {
+      el.parentElement.querySelector('.err').classList.toggle('hidden', valid);
+      el.classList.toggle('border-[#DC2626]', !valid);
+      if (!valid) { ok = false; first = first || el; }
+    });
+    if (!ok) { first.focus(); return; }
+
+    if (SHEET_URL.includes('PASTE_YOUR')) {
+      formError.textContent = 'সেটআপ বাকি: স্ক্রিপ্টের SHEET_URL-এ Google Apps Script Web App URL বসানো হয়নি।';
+      formError.classList.remove('hidden');
+      return;
+    }
+
+    const s = update();
+    const customerName = name.value.trim();
+    const note = document.getElementById('note').value.trim();
+    const zoneLabel = s.zone === 70 ? 'ঢাকার ভেতরে' : 'ঢাকার বাইরে';
+
+    // Google Sheets-এ যাবে এমন ডেটা (সব গুড় একসাথে এক ঘরে)
+    const payload = {
+      name: customerName,
+      phone: phoneVal,
+      address: addr.value.trim(),
+      district: district.value.trim(),
+      product: s.items.map(i => `${i.p.name} (${i.p.weight}) × ${i.q}`).join(' | '),
+      delivery: `${s.delivery} (${zoneLabel})`,
+      total: s.hasCustom ? `${s.total} + কাস্টমাইজড প্যাকের মূল্য (আলোচনা সাপেক্ষে)` : String(s.total),
+      note: note
+    };
+
+    // ঐচ্ছিক WhatsApp বার্তা (মডালের বাটনের জন্য)
+    const itemLines = s.items.map(i => `• ${i.p.name} (${i.p.weight}) × ${bn(i.q)} = ${i.p.price ? taka(i.p.price * i.q) : 'মূল্য আলোচনা সাপেক্ষে'}`).join('\n');
+    const totalLine = taka(s.total) + (s.hasCustom ? ' + কাস্টমাইজড প্যাকের মূল্য' : '');
+    const message =
+      `🍯 *নতুন অর্ডার — গুড় হাউস*\n━━━━━━━━━━━━━━\n` +
+      `👤 *নাম:* ${customerName}\n📞 *মোবাইল:* ${bn(phoneVal)}\n` +
+      `📍 *ঠিকানা:* ${payload.address}, ${payload.district}\n━━━━━━━━━━━━━━\n` +
+      `📦 *পণ্য:*\n${itemLines}\n💵 *পণ্যের মূল্য:* ${taka(s.subtotal)}\n` +
+      `🚚 *ডেলিভারি (${zoneLabel}):* ${taka(s.delivery)}\n💰 *সর্বমোট:* ${totalLine}\n` +
+      (note ? `📝 *নোট:* ${note}\n` : '') + `━━━━━━━━━━━━━━\n💳 পেমেন্ট: ক্যাশ অন ডেলিভারি`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`;
+
+    // লোডিং অবস্থা
+    sending = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'অর্ডার সাবমিট হচ্ছে...';
+    submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+    try {
+      // no-cors: রেসপন্স পড়া যায় না (opaque), তবে নেটওয়ার্ক ব্যর্থ হলে error throw করে।
+      // তাই fetch সফলভাবে শেষ হলেই সফল ধরা হয়। text/plain ব্যবহার করায় CORS preflight লাগে না।
+      await fetch(SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
+
+      document.getElementById('modalMsg').textContent =
+        'ধন্যবাদ! আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে। খুব শীঘ্রই আমাদের প্রতিনিধি আপনাকে কল করে অর্ডার কনফার্ম করবেন।';
+      document.getElementById('modalWa').href = whatsappUrl;
+      document.getElementById('modalSummary').innerHTML =
+        s.items.map(i => `<div>🍯 ${i.p.name} × ${bn(i.q)}</div>`).join('') +
+        `<div>🚚 ডেলিভারি: ${taka(s.delivery)}</div>` +
+        `<div class="font-bold text-[#C05621]">💰 সর্বমোট: ${totalLine}</div>`;
+      modal.classList.remove('hidden'); modal.classList.add('flex');
+      form.reset(); resetCart();
+    } catch (err) {
+      console.error(err);
+      formError.textContent = 'দুঃখিত, অর্ডার জমা হয়নি। ইন্টারনেট সংযোগ দেখে আবার চেষ্টা করুন অথবা আমাদের হোয়াটসঅ্যাপে মেসেজ করুন।';
+      formError.classList.remove('hidden');
+    } finally {
+      sending = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = submitLabel;
+      submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+    }
+  });
+  function closeModal(){ modal.classList.add('hidden'); modal.classList.remove('flex'); }
+  document.getElementById('modalClose').onclick = closeModal;
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // ----- FAQ accordion -----
+  document.querySelectorAll('.faq-item button').forEach(btn => btn.addEventListener('click', () => {
+    const item = btn.parentElement, wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }));
+
+  // ----- Scroll reveal -----
+  const io = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('show'); io.unobserve(en.target); }
+  }), { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
